@@ -5,7 +5,7 @@ export class Movie{
     name: String;
     description: String;
     genres: Array<GenreType>;
-    rate: String;
+    rate: any;
     length: String;
     img: String;
 }
