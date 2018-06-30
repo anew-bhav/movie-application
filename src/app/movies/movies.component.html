@@ -1,0 +1,9 @@
+<ul class="list-unstyled" *ngFor="let movie of movies">
+  <li class="media">
+    <img class="mr-3" src="../../assets/images/movie-covers/{{movie.img}}" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ movie.name }}</h5>
+      {{movie.description}}
+    </div>
+  </li>
+</ul>
