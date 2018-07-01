@@ -103,16 +103,6 @@ export const MOVIES: Movie[] = [
 		img: "the-man-from-uncle.jpg"
 	},
 	{
-		id: 10,
-		key: "spectre",
-		name: "Spectre",
-		description: "A cryptic message from Bond's past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
-		genres: [genreType.action, genreType.adventure, genreType.thriller],
-		rate: "6.9",
-		length: "2hr 28mins",
-		img: "spectre.jpg"
-	},
-	{
 		id: 11,
 		key: "legend",
 		name: "Legend",
@@ -241,5 +231,14 @@ export const MOVIES: Movie[] = [
 		rate: "6.8",
 		length: "1hr 59mins",
 		img: "bad-boys.jpg"
+	},{
+		id: 24,
+		key: "spectre",
+		name: "Spectre",
+		description: "A cryptic message from Bond's past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
+		genres: [genreType.action, genreType.adventure, genreType.thriller],
+		rate: "6.9",
+		length: "2hr 28mins",
+		img: "spectre.jpg"
 	}
 ];
