@@ -94,16 +94,6 @@ export const MOVIES: Movie[] = [
 	},
 	{
 		id: 10,
-		key: "the-man-from-uncle",
-		name: "The Man from U.N.C.L.E.",
-		description: "In the early 1960s, CIA agent Napoleon Solo and KGB operative Illya Kuryakin participate in a joint mission against a mysterious criminal organization, which is working to proliferate nuclear weapons.",
-		genres: [genreType.action, genreType.adventure, genreType.thriller],
-		rate: "7.3",
-		length: "1hr 56mins",
-		img: "the-man-from-uncle.jpg"
-	},
-	{
-		id: 10,
 		key: "spectre",
 		name: "Spectre",
 		description: "A cryptic message from Bond's past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
@@ -241,5 +231,15 @@ export const MOVIES: Movie[] = [
 		rate: "6.8",
 		length: "1hr 59mins",
 		img: "bad-boys.jpg"
+	},
+	{
+		id: 24,
+		key: "the-man-from-uncle",
+		name: "The Man from U.N.C.L.E.",
+		description: "In the early 1960s, CIA agent Napoleon Solo and KGB operative Illya Kuryakin participate in a joint mission against a mysterious criminal organization, which is working to proliferate nuclear weapons.",
+		genres: [genreType.action, genreType.adventure, genreType.thriller],
+		rate: "7.3",
+		length: "1hr 56mins",
+		img: "the-man-from-uncle.jpg"
 	}
 ];

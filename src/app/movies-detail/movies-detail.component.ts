@@ -23,7 +23,7 @@ export class MoviesDetailComponent implements OnInit {
       this.data.getMovie(this.movie).subscribe(
         data => this.movie = data
       );
-      this.movie.rate = parseFloat(this.movie.rate);
+      // this.movie.rate = parseFloat(this.movie.rate);
     }
   
   }
