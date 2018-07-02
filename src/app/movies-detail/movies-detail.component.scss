@@ -2,11 +2,18 @@
     color: #fff;
     height: 50%;
   }
-
-.genre-list,.genre-list > li {
-    display: inline;
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  color: #d3d3d3;
 }
-.genre-list{
-  padding : 10px;
-  
+.full {
+  color: gray;
+}
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: gray;
 }

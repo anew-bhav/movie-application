@@ -1,12 +1,22 @@
+<h1 class="text-center">Movies</h1>
 <div class="container">
     <ul class="list-unstyled" *ngFor="let movie of movies">
-        <li class="media">
-          <img class="mr-3" src="../../assets/images/movie-covers/{{movie.img}}" alt="{{ movie.name }}">
-          <div class="media-body">
-            <a routerLink="movies-detail/{{movie.id}}">
-              <h5 class="mt-0 mb-1">{{ movie.name }}</h5>
-            </a>
-            {{movie.description}}
+        <li class="media padded border border-secondary  ">
+          <div class="row">
+            <div class= "col-md-3 col-sm-6 col-xs-12">
+                <img class="mx-auto d-block rounded" src="../../assets/images/movie-covers/{{movie.img}}" alt="{{ movie.name }}">
+            </div>
+            <div class=" col-md-9 col-sm-6 col-xs-12">
+              <div class="media-body mx-2 my-2 py-2 ">
+                <a routerLink="movies-detail/{{movie.id}}">
+                  <h5>{{ movie.name }}</h5>
+                </a>
+                <p>{{movie.description}}</p>
+                <li class="card-text d-inline" *ngFor="let genre of movie.genres">
+                    <span class="badge text-capitalize badge-pill badge-info">{{ genre }}</span>
+                </li>
+              </div>
+            </div>
           </div>
         </li>
       </ul>

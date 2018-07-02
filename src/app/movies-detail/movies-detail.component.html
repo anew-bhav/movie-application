@@ -2,14 +2,23 @@
     <div class=" card mb-3">
         <img class="img-thumbnail mx-auto d-block" src="../../assets/images/movie-covers/{{movie.img}}" alt="{{ movie.name }}">
         <div class="card-body">
-          <h5 class="card-title font-weight-bold">{{movie.name}}</h5>
-          <p class="card-text">{{movie.description}}</p>
-          <p class="card-text"><small class="text-muted">{{movie.length}}</small></p>
-          <p class="card-text"><small>Rating :</small><ngb-rating [(rate)]="movie.rate" [readonly]=true></ngb-rating>   {{ (movie.rate) }}</p>
-          <ul class="genre-list text-uppercase" *ngFor="let genre of movie.genres">
-              <li class=" badge badge-pill badge-secondary">{{ genre }}</li>
-          </ul>
+            <h5 class="card-title font-weight-bold">{{movie.name}}</h5>
+            <p class="card-text">{{movie.description}}</p>
+            <p class="card-text"><small class="text-muted">{{movie.length}}</small></p>
+            <p class="card-text"><ngb-rating  [starTemplate]="t" [(rate)]="movie.rate" [readonly]=true></ngb-rating>   {{ (movie.rate) }}</p>
+            <li class="card-text d-inline" *ngFor="let genre of movie.genres">
+                <span class="badge text-capitalize badge-pill badge-info">{{ genre }}</span>
+            </li>
         </div>
       </div>
 </div>
+
+<ng-template #t let-fill="fill">
+    <small>
+            <span class="star" [class.full]="fill === 100">
+                    <span class="half" [style.width.%]="fill">&#9733;</span>&#9734;  
+            </span>
+    </small>
+    
+</ng-template>
 
