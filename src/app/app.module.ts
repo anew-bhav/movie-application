@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from "@angular/forms";
 
 import { UiModule } from './ui/ui.module'
 import { AppComponent } from './app.component';
@@ -12,13 +13,14 @@ import { MoviesDetailComponent } from './movies-detail/movies-detail.component';
   declarations: [
     AppComponent,
     MoviesComponent,
-    MoviesDetailComponent
+    MoviesDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    UiModule  ],
+    UiModule,
+    FormsModule  ],
 
   providers: [],
   bootstrap: [AppComponent]

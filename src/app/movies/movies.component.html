@@ -1,5 +1,19 @@
 <h1 class="text-center">Movies</h1>
 <div class="container">
+  <div class="row">
+    <div class="offset-md-8"></div>
+    <div class="col-md-4">
+      <div class="my-4 form-group">
+        <label for="genre-select">Genre filter</label>
+        <select class="custom-select" name="genre-select" [(ngModel)] = "genre_selected" (ngModelChange)="onGenreSelected($event)"> 
+          <option  selected>All</option>
+          <option *ngFor="let genre of genres" [value]="genre">{{ genre | titlecase }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
     <ul class="list-unstyled" *ngFor="let movie of movies">
         <li class="media padded border border-secondary  ">
           <div class="row">

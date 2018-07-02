@@ -9,3 +9,13 @@ export class Movie{
     length: String;
     img: String;
 }
+
+export class MoviesByGenre{
+
+    constructor(){
+        this.movie = [];
+    }
+
+    genre: GenreType;
+    movie: Movie[];
+}
