@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { Movie } from "./movie-data/movie";
+import { genreType,GenreType } from "./movie-data/movie.model";
 import { MOVIES } from "./movie-data/movie.mock-data";
 
 @Injectable({
@@ -26,5 +27,29 @@ export class DataService {
       }
     }
   }
+
+
+  getGenres(): Observable<any>{
+      return of(genreType);
+  }
+
+  getMovieByGenre(genre: GenreType): Observable<Movie[]>{
+    let movies_by_name: Movie[];
+    movies_by_name = [];
+    if(genre in genreType){
+      for (var movie in MOVIES) {
+        if (MOVIES.hasOwnProperty(movie)) {
+          var element = MOVIES[movie];
+          if(element.genres.includes(genre)){
+            movies_by_name.push(element);
+          }
+        }
+      }
+    }
+    return of(movies_by_name);
+  }
+
   
-}
+
+  }
+
