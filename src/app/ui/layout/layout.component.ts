@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GoTopButton } from "ng2-go-top-button";
+
 
 @Component({
   selector: 'app-layout',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }

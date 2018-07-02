@@ -1,5 +1,18 @@
 <app-header></app-header>
-<div class="jumbotron">
+<go-top-button [animate] = "true"
+               [speed] = "100"
+               [acceleration] = "5"
+               [scrollDistance] = "300"
+               [styles] = "{
+                   'border-radius':'20px 20px 20px 20px',
+                   'right': '5px',
+                   'color': 'gray',
+                   'border': '5px solid',
+                   'line-height':'20px'
+               }">
+               <img src="../../assets/images/arrow-up-solid.svg" alt="^">
+</go-top-button>
+<div class="jumbotron bg-white">
     <ng-content></ng-content>
 </div>
 <app-footer></app-footer>
