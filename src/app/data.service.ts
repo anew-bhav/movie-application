@@ -12,6 +12,7 @@ import { MOVIES } from "./movie-data/movie.mock-data";
 export class DataService{
 
   movies_by_genre_array: MoviesByGenre[];
+
   constructor() { }
 
 
@@ -55,20 +56,25 @@ export class DataService{
       this.movies_by_genre_array.push(movies_by_genre);
       movies_by_genre=new MoviesByGenre;
     }
-    console.log(this.movies_by_genre_array);
   }
 
-    getMoviesByGenre(genre: GenreType): Observable<Movie[]>{
-      let result: Movie[];
-      result = [];
-      this.movies_by_genre_array.forEach(element => {
-        if (element.genre == genre) {
-          result = element.movie;
-        }
-      });
-      return of(result);
+  getMoviesByGenre(genre: GenreType): Observable<Movie[]>{
+    let result: Movie[];
+    result = [];
+    this.movies_by_genre_array.forEach(element => {
+      if (element.genre == genre) {
+        result = element.movie;
+      }
+    });
+    return of(result);
   }
 
-
+  getMovieBySearchTerm(text: Object): Observable<Movie[]>{
+    let movies: Movie[];
+    console.log(text['term']);
+    movies = MOVIES.filter(v => v.name.toLowerCase().indexOf(text['term'].toLowerCase()) > -1);
+    console.log(movies);
+    return of(movies);
+  }
 }
 
