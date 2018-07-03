@@ -6,7 +6,7 @@
             <h5 class="card-title font-weight-bold">{{movie.name}}</h5>
             <p class="card-text">{{movie.description}}</p>
             <p class="card-text"><small class="text-muted">{{movie.length}}</small></p>
-            <p class="card-text"><ngb-rating  [starTemplate]="t" [(rate)]="movie.rate" [readonly]=true></ngb-rating>   {{ (movie.rate) }}</p>
+            <p class="card-text"><ngb-rating  [(rate)]="movie.rate" [readonly]=true></ngb-rating>   {{ (movie.rate) }}</p>
             <li class="card-text d-inline" *ngFor="let genre of movie.genres">
                 <span class="badge text-capitalize badge-pill badge-info">{{ genre }}</span>
             </li>
@@ -16,11 +16,11 @@
 </div>
 
 <!-- Template used to display rating as stars  -->
-<ng-template #t let-fill="fill">
+<!-- <ng-template #t let-fill="fill">
     <small>
         <span class="star" [class.full]="fill === 100">
                 <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;  
         </span>
     </small>
-</ng-template>
+</ng-template> -->
 
