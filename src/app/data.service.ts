@@ -15,11 +15,12 @@ export class DataService{
 
   constructor() { }
 
-
+// Return observable of type Movie[]
   getMovies(): Observable<Movie[]> {
     return of(MOVIES);
   }
 
+// Get movie by id and return observable of type Movie
   getMovie(movieId): Observable<Movie> {
     for (var movie in MOVIES) {
       if (MOVIES.hasOwnProperty(movie)) {
@@ -31,6 +32,7 @@ export class DataService{
     }
   }
 
+// Get list of all genres
   getGenres(): Observable<any>{
     let genre_list: GenreType[];
     let genre_keys = Object.keys(genreType);
@@ -41,6 +43,7 @@ export class DataService{
     return of(genre_list);
   }
 
+//generate datastructure categorizing movies by genre
   generateMoviesByGenreArray(){
     let movies_by_genre: MoviesByGenre;
     let genre_keys = Object.keys(genreType);
@@ -58,6 +61,7 @@ export class DataService{
     }
   }
 
+//returns observable of tyepe Movie[], where each element belonging to the supplied  genre
   getMoviesByGenre(genre: GenreType): Observable<Movie[]>{
     let result: Movie[];
     result = [];
@@ -69,6 +73,7 @@ export class DataService{
     return of(result);
   }
 
+// returns observable of type Movie[], where each element has term in its name
   getMovieBySearchTerm(text: Object): Observable<Movie[]>{
     let movies: Movie[];
     console.log(text['term']);

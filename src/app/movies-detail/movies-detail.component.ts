@@ -14,7 +14,7 @@ import { NgbRating } from '@ng-bootstrap/ng-bootstrap'
 export class MoviesDetailComponent implements OnInit {
   
     movie: Movie;
-  
+    
     constructor(private route: ActivatedRoute, private data: DataService) { 
       this.route.params.subscribe( params => this.movie = params.id )
     }

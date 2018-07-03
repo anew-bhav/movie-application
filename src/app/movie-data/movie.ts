@@ -1,4 +1,6 @@
 import { GenreType } from './movie.model'
+
+// Class structure of Movie Class, which facilitates retrieval of information
 export class Movie{
     id: Number;
     key: String;
@@ -10,12 +12,11 @@ export class Movie{
     img: String;
 }
 
+// Class structure for storing movies by each genre
 export class MoviesByGenre{
-
     constructor(){
         this.movie = [];
     }
-
     genre: GenreType;
     movie: Movie[];
 }

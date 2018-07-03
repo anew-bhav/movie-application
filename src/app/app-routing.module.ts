@@ -6,10 +6,12 @@ import { AppComponent } from './app.component'
 
 const routes: Routes = [
   {
+    // path for home 
     path:'',
     component: MoviesComponent
   },
-  {
+  { 
+    // path for finding movie using  id
     path:'movies-detail/:id',
     component: MoviesDetailComponent
   }
