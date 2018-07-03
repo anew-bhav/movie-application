@@ -1,3 +1,5 @@
+import { WindowModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,8 +17,11 @@ import { MoviesDetailComponent } from './movies-detail/movies-detail.component';
     MoviesComponent,
     MoviesDetailComponent,
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+WindowModule,
+ 
+    
     AppRoutingModule,
     NgbModule.forRoot(),
     UiModule,
@@ -24,6 +29,5 @@ import { MoviesDetailComponent } from './movies-detail/movies-detail.component';
     ReactiveFormsModule  ],
 
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
